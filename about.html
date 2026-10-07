@@ -11,7 +11,7 @@
     <meta property="og:description" content="I’m Shalini Yadav, a UI/UX &amp; Product Designer in Kanpur, India. I work on wellness and programming projects." />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary" />
-    <meta name="theme-color" content="#fbf9f6" />
+    <meta name="theme-color" content="#FFF9EF" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,18 +59,20 @@
     <main class="site-main" id="main-content" tabindex="-1">
       <section class="page-shell page-section about-intro" aria-labelledby="about-heading">
         <div class="about-intro__copy">
-          <p class="eyebrow">About</p>
-          <h1 id="about-heading">Art, code, and finding my way to design.</h1>
+          <p class="eyebrow chapter-label" data-chapter="01">About</p>
+          <h1 id="about-heading">Art, code, and finding my way to <em>design</em>.</h1>
           <p>I’m Shalini, a UI/UX &amp; Product Designer in Kanpur. Here’s how I got here.</p>
           <a class="text-link" href="contact.html">Let’s connect <span aria-hidden="true">↗</span></a>
         </div>
+        <figure class="frame frame--portrait about-portrait" data-empty-label="Add about-portrait.jpg">
+          <img src="assets/images/about-portrait.jpg" alt="Portrait of Shalini Yadav" width="800" height="1000" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+        </figure>
       </section>
-      <!-- TODO: add Shalini's portrait when a confirmed photo is available. -->
 
       <section class="page-shell page-section" aria-labelledby="practice-heading" data-reveal>
         <div class="section-split">
           <div>
-            <p class="eyebrow">A few chapters</p>
+            <p class="eyebrow chapter-label" data-chapter="02">A few chapters</p>
             <h2 class="section-heading" id="practice-heading">The things that brought me here.</h2>
           </div>
           <p>Art came first. Then I found the joy of building things and making them easier to use.</p>
@@ -97,7 +99,7 @@
 
       <section class="page-shell page-section about-details" aria-labelledby="toolkit-heading">
         <div>
-          <p class="eyebrow">Education</p>
+          <p class="eyebrow chapter-label" data-chapter="03">Education</p>
           <h2 id="toolkit-heading">B.Tech in Computer Science</h2>
           <p>Pranveer Singh Institute of Technology, Kanpur · Expected 2027</p>
         </div>
@@ -118,7 +120,7 @@
       <section class="page-shell page-section" aria-labelledby="selected-work-heading">
         <div class="section-split">
           <div>
-            <p class="eyebrow">Selected projects</p>
+            <p class="eyebrow chapter-label" data-chapter="04">Selected projects</p>
             <h2 class="section-heading" id="selected-work-heading">Kai and Quiz Buddy</h2>
           </div>
           <div class="footer-links about-project-links">

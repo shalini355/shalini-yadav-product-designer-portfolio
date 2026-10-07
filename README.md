@@ -22,8 +22,18 @@ A static portfolio built with semantic HTML, CSS, and vanilla JavaScript. It has
 ├── js/
 │   └── main.js
 └── assets/
+    ├── images/
+    │   ├── hero.jpg
+    │   ├── kai-cover.jpg
+    │   ├── kai-01.jpg through kai-06.jpg
+    │   ├── quiz-buddy-cover.jpg
+    │   ├── quiz-buddy-01.jpg through quiz-buddy-06.jpg
+    │   └── about-portrait.jpg
     └── resume.pdf
 ```
+
+Add project and portrait images to `assets/images/`. If an expected image is
+missing, its frame displays the filename to add.
 
 ## Run locally
 

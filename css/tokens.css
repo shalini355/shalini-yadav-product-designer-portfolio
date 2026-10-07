@@ -1,23 +1,23 @@
 :root {
-  --color-bg: #f7f6f2;
-  --color-surface: #efeee9;
-  --color-surface-strong: #e8e6df;
-  --color-surface-card: #fcfbf8;
-  --color-border: #dfded7;
-  --color-border-strong: #c4c2b9;
-  --color-text: #20201e;
-  --color-text-muted: #51514c;
-  --color-text-soft: #6c6b64;
-  --color-primary: #4937d4;
-  --color-primary-strong: #3827bd;
-  --color-primary-soft: #e9e6ff;
-  --color-secondary: #51514c;
-  --color-secondary-soft: #eeece7;
-  --color-tertiary: #51514c;
-  --color-tertiary-soft: #e9e7e1;
-  --color-accent-blush: #eeece7;
-  --color-overlay: rgba(247, 246, 242, 0.94);
-  --color-shadow: rgba(32, 32, 30, 0.04);
+  --color-bg: #fff9ef;
+  --color-surface: #fff3e0;
+  --color-surface-strong: #fde9cf;
+  --color-surface-card: #fffcf6;
+  --color-border: rgba(30, 35, 71, 0.15);
+  --color-border-strong: rgba(30, 35, 71, 0.3);
+  --color-text: #1e2347;
+  --color-text-muted: #5a5f7d;
+  --color-text-soft: #5a5f7d;
+  --color-primary: #ff8a3d;
+  --color-primary-strong: #a8d672;
+  --color-primary-soft: #cdbfff;
+  --color-secondary: #5a5f7d;
+  --color-secondary-soft: #ffe3ee;
+  --color-tertiary: #5a5f7d;
+  --color-tertiary-soft: #eaf4da;
+  --color-accent-blush: #ffe3ee;
+  --color-overlay: rgba(255, 249, 239, 0.94);
+  --color-shadow: rgba(30, 35, 71, 0.04);
   --color-success: var(--color-primary);
 
   --font-display: "Playfair Display", Georgia, serif;
@@ -61,13 +61,13 @@
   --section-padding: clamp(4rem, 7vw, 6rem);
   --card-radius: var(--radius-sm);
   --card-padding: clamp(1.5rem, 3vw, 2rem);
-  --card-border: 1px solid rgba(32, 32, 30, 0.12);
+  --card-border: 1px solid rgba(30, 35, 71, 0.12);
   --control-radius: 0.55rem;
   --header-height: 5.5rem;
   --section-gap: var(--section-padding);
   --content-width: 66rem;
 
-  --shadow-soft: 0 18px 44px -24px rgba(32, 32, 30, 0.12);
-  --shadow-card: 0 8px 22px rgba(32, 32, 30, 0.06);
+  --shadow-soft: 0 18px 44px -24px rgba(30, 35, 71, 0.12);
+  --shadow-card: 0 8px 22px rgba(30, 35, 71, 0.06);
   --border-soft: 1px solid var(--color-border);
 }

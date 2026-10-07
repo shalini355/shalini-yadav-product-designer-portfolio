@@ -54,6 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const frames = Array.from(document.querySelectorAll('.frame'));
+    frames.forEach((frame) => {
+      frame.setAttribute('data-reveal', '');
+    });
+    document.querySelectorAll('.frame-row').forEach((row) => {
+      row.querySelectorAll('.frame').forEach((frame, index) => {
+        frame.style.setProperty('--reveal-delay', `${index * 100}ms`);
+      });
+    });
+
+    const revealElements = Array.from(document.querySelectorAll('[data-reveal]'));
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -61,12 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.12 });
+    }, { rootMargin: '0px 0px -24px 0px', threshold: 0.01 });
 
-    document.querySelectorAll('[data-reveal]').forEach((element) => {
+    body.classList.add('motion-enabled');
+    revealElements.forEach((element) => {
+      const bounds = element.getBoundingClientRect();
+      if (bounds.bottom > 0 && bounds.top < window.innerHeight) {
+        element.setAttribute('data-revealed', 'true');
+        return;
+      }
+
       revealObserver.observe(element);
     });
-    body.classList.add('motion-enabled');
   }
 
   const emailButton = document.querySelector('[data-copy-email]');
