@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Quiz Buddy is a programming practice platform with multiple languages, three difficulty levels, responsive UI, dynamic question navigation, and score tracking." />
     <title>Quiz Buddy | UI/UX &amp; Product Designer | Shalini Yadav</title>
+    <script>
+      const PROJECT_LINKS = {
+        live: "[PASTE QUIZ BUDDY VERCEL LINK]",
+        github: "[PASTE QUIZ BUDDY GITHUB LINK]"
+      };
+    </script>
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Shalini Yadav" />
     <meta property="og:title" content="Quiz Buddy | UI/UX &amp; Product Designer | Shalini Yadav" />
@@ -34,7 +40,7 @@
         </a>
 
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-          <a href="../index.html" class="nav-link" data-page="home">Work</a>
+          <a href="../case-studies.html" class="nav-link" data-page="case-studies">Case Studies</a>
           <a href="kai.html" class="nav-link" data-page="work-kai">Kai</a>
           <a href="quiz-buddy.html" class="nav-link" data-page="work-quiz-buddy">Quiz Buddy</a>
           <a href="../about.html" class="nav-link" data-page="about">About</a>
@@ -60,35 +66,45 @@
       <section class="page-shell page-section case-study-intro" aria-labelledby="quiz-heading">
         <div class="case-study-lead">
           <p class="eyebrow">Quiz Buddy · Learning</p>
-          <h1 id="quiz-heading">A programming practice platform.</h1>
-          <p>Quiz Buddy lets learners practise programming across multiple languages and difficulty levels. I worked on it as part of a team.</p>
+          <h1 id="quiz-heading">Quiz Buddy</h1>
+          <p>A programming practice platform with multiple languages and difficulty levels.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" data-project-link="live" target="_blank" rel="noopener noreferrer" style="display: none;">View Live Project</a>
+            <a class="btn btn--secondary" data-project-link="github" target="_blank" rel="noopener noreferrer" style="display: none;">View on GitHub</a>
+            <a class="btn btn--secondary" href="../case-studies.html">Back to Case Studies</a>
+          </div>
         </div>
         <section class="case-overview" aria-labelledby="quiz-overview-heading">
-          <h2 class="eyebrow" id="quiz-overview-heading">Overview</h2>
+          <h2 class="eyebrow" id="quiz-overview-heading">Project details</h2>
           <dl class="case-overview__list">
-            <div><dt>Role</dt><dd>UI designer and frontend developer · Team project</dd></div>
+            <div><dt>Role</dt><dd>UI designer and frontend developer · Team</dd></div>
             <div><dt>Tools</dt><dd>HTML, CSS, JavaScript, Git</dd></div>
+            <!-- TODO: add the confirmed project timeline. -->
           </dl>
         </section>
       </section>
-      <!-- TODO: add project timeline and confirmed live and repository links. -->
-      <!-- TODO: add interview findings and user quotes when available. -->
 
       <section class="page-shell page-section case-section" aria-labelledby="quiz-problem-heading">
-        <p class="eyebrow">The problem</p>
-        <h2 id="quiz-problem-heading">Practice across languages and skill levels.</h2>
-        <p>Quiz Buddy brings programming questions together across multiple languages, with Beginner, Intermediate, and Advanced levels.</p>
+        <p class="eyebrow">Overview</p>
+        <h2 id="quiz-problem-heading">A programming practice platform.</h2>
+        <p>Quiz Buddy brings together multiple programming languages, three difficulty levels, responsive layouts, dynamic question navigation, and score tracking. I worked on it as part of a team.</p>
       </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="quiz-audience-heading">
-        <p class="eyebrow">Who it's for</p>
-        <h2 id="quiz-audience-heading">People practising programming.</h2>
-        <p>The platform is for learners who want to practise different programming languages at a level that suits them.</p>
+        <p class="eyebrow">The Problem</p>
+        <h2 id="quiz-audience-heading">Practice across languages and skill levels.</h2>
+        <p>Quiz Buddy brings programming practice together across multiple languages and Beginner, Intermediate, and Advanced levels.</p>
       </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="quiz-made-heading">
-        <p class="eyebrow">What I made</p>
-        <h2 id="quiz-made-heading">A responsive practice flow.</h2>
+        <p class="eyebrow">Who It's For</p>
+        <h2 id="quiz-made-heading">For people practising programming.</h2>
+        <p>The platform is for learners who want to practise different programming languages at a level that suits them.</p>
+      </section>
+
+      <section class="page-shell page-section case-section" aria-labelledby="quiz-features-heading">
+        <p class="eyebrow">What I Made</p>
+        <h2 id="quiz-features-heading">A responsive practice flow.</h2>
         <ul class="pill-list" aria-label="Quiz Buddy features">
           <li><span>Multiple programming languages</span></li>
           <li><span>Beginner, Intermediate, Advanced</span></li>
@@ -99,37 +115,41 @@
       </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="quiz-decisions-heading">
-        <p class="eyebrow">Design decisions</p>
+        <p class="eyebrow">Design Decisions</p>
         <h2 id="quiz-decisions-heading">A few choices shape the practice experience.</h2>
         <div class="case-decisions">
           <article>
             <h3>Language choices</h3>
-            <p>I included multiple programming languages so learners can practise in the language they want to use.</p>
+            <p>Multiple programming languages let learners choose what they want to practise.</p>
           </article>
           <article>
             <h3>Three levels</h3>
-            <p>Beginner, Intermediate, and Advanced levels let learners choose the difficulty for their practice.</p>
+            <p>Beginner, Intermediate, and Advanced levels offer three difficulty choices for practice.</p>
           </article>
           <article>
             <h3>Question navigation</h3>
-            <p>Dynamic question navigation gives learners a way to move through the practice questions.</p>
+            <p>Dynamic question navigation lets learners move through the questions.</p>
           </article>
           <article>
             <h3>Responsive layouts and scores</h3>
-            <p>I included responsive layouts and score tracking so the practice flow works across screen sizes and keeps a record of the score.</p>
+            <p>Responsive layouts support the practice flow across screen sizes, while score tracking records a learner's score.</p>
           </article>
         </div>
       </section>
 
-      <!-- TODO: add 3 real Quiz Buddy screenshots as polaroid-frame figures with descriptive alt text. -->
+      <!-- TODO: add screenshots. -->
 
       <section class="page-shell page-section case-section" aria-labelledby="quiz-learning-heading">
-        <p class="eyebrow">What I learned</p>
+        <p class="eyebrow">What I Learned</p>
         <h2 id="quiz-learning-heading">I enjoy making products easy and kind to use.</h2>
         <p>Working on Quiz Buddy reinforced what I learned from building Kai: the part I love most is making a product feel easy and kind to use.</p>
       </section>
 
-      <!-- TODO: add next steps when the project roadmap is confirmed. -->
+      <!-- TODO: add what's next when the project roadmap is confirmed. -->
+
+      <nav class="page-shell page-section" aria-label="Other case studies">
+        <a class="btn btn--secondary" href="kai.html">Previous case study: Kai</a>
+      </nav>
     </main>
 
     <footer class="site-footer">
@@ -157,6 +177,15 @@
       </div>
     </footer>
 
+    <script>
+      document.querySelectorAll("[data-project-link]").forEach((link) => {
+        const url = PROJECT_LINKS[link.dataset.projectLink];
+        if (typeof url === "string" && /^https:\/\/[^\s]+$/i.test(url)) {
+          link.href = url;
+          link.style.display = "";
+        }
+      });
+    </script>
     <script src="../js/main.js"></script>
   </body>
 </html>

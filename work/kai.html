@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="I designed Kai, an AI wellness companion with English and Hinglish chat and a focus on privacy." />
     <title>Kai | UI/UX &amp; Product Designer | Shalini Yadav</title>
+    <script>
+      const PROJECT_LINKS = {
+        live: "[PASTE KAI VERCEL LINK]",
+        github: "[PASTE KAI GITHUB LINK]"
+      };
+    </script>
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Shalini Yadav" />
     <meta property="og:title" content="Kai | UI/UX &amp; Product Designer | Shalini Yadav" />
@@ -34,7 +40,7 @@
         </a>
 
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-          <a href="../index.html" class="nav-link" data-page="home">Work</a>
+          <a href="../case-studies.html" class="nav-link" data-page="case-studies">Case Studies</a>
           <a href="kai.html" class="nav-link" data-page="work-kai">Kai</a>
           <a href="quiz-buddy.html" class="nav-link" data-page="work-quiz-buddy">Quiz Buddy</a>
           <a href="../about.html" class="nav-link" data-page="about">About</a>
@@ -60,46 +66,56 @@
       <section class="page-shell page-section case-study-intro" aria-labelledby="kai-heading">
         <div class="case-study-lead">
           <p class="eyebrow">Kai · Wellness</p>
-          <h1 id="kai-heading">An empathetic AI wellness companion.</h1>
-          <p>I designed and developed Kai on my own. It offers English and Hinglish chat, mood-trend charts, and a friendly fallback when the AI is unavailable.</p>
+          <h1 id="kai-heading">Kai</h1>
+          <p>An empathetic AI wellness companion for English and Hinglish chat, mood reflection, and private personal data.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" data-project-link="live" target="_blank" rel="noopener noreferrer" style="display: none;">View Live Project</a>
+            <a class="btn btn--secondary" data-project-link="github" target="_blank" rel="noopener noreferrer" style="display: none;">View on GitHub</a>
+            <a class="btn btn--secondary" href="../case-studies.html">Back to Case Studies</a>
+          </div>
         </div>
-        <section class="case-overview" aria-labelledby="kai-overview-heading">
-          <h2 class="eyebrow" id="kai-overview-heading">Overview</h2>
+        <section class="case-overview" aria-labelledby="kai-details-heading">
+          <h2 class="eyebrow" id="kai-details-heading">Project details</h2>
           <dl class="case-overview__list">
-            <div><dt>Role</dt><dd>Designer and developer · Solo project</dd></div>
+            <div><dt>Role</dt><dd>Designer and developer · Solo</dd></div>
+            <!-- TODO: add confirmed Kai tools and timeline. -->
           </dl>
         </section>
       </section>
-      <!-- TODO: add tools, timeline, and live project link when confirmed. -->
-      <!-- TODO: add interview findings when available. -->
+
+      <section class="page-shell page-section case-section" aria-labelledby="kai-overview-heading">
+        <p class="eyebrow">Overview</p>
+        <h2 id="kai-overview-heading">A companion for chat and mood reflection.</h2>
+        <p>Kai combines English and Hinglish chat with sentiment scoring and mood-trend charts. It also includes a friendly fallback when the AI is unavailable, secure sign-in, and privacy-first handling of personal data.</p>
+      </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="kai-problem-heading">
-        <p class="eyebrow">The problem</p>
-        <h2 id="kai-problem-heading">Wellness support should feel easy to approach.</h2>
-        <p>Kai is designed to offer an empathetic wellness companion, with chat that can feel familiar in either English or Hinglish.</p>
+        <p class="eyebrow">The Problem</p>
+        <h2 id="kai-problem-heading">Wellness chat should feel considerate and private.</h2>
+        <p>Kai brings chat, mood reflection, and secure sign-in together, while accounting for moments when the AI is unavailable.</p>
       </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="kai-audience-heading">
-        <p class="eyebrow">Who it's for</p>
-        <h2 id="kai-audience-heading">People looking for a little wellness support.</h2>
-        <p>Kai is for people who want to chat in English or Hinglish and keep their personal data private.</p>
+        <p class="eyebrow">Who It's For</p>
+        <h2 id="kai-audience-heading">For people who want a private space to reflect.</h2>
+        <p>Kai is for people who want to chat in English or Hinglish and keep their wellness reflections private.</p>
       </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="kai-made-heading">
-        <p class="eyebrow">What I made</p>
-        <h2 id="kai-made-heading">A companion for chat and mood reflection.</h2>
+        <p class="eyebrow">What I Made</p>
+        <h2 id="kai-made-heading">Chat, mood trends, and thoughtful fallbacks.</h2>
         <ul class="pill-list" aria-label="Kai features">
           <li><span>English and Hinglish chat</span></li>
           <li><span>Sentiment scoring</span></li>
           <li><span>Mood-trend charts</span></li>
-          <li><span>Friendly AI-unavailable fallback</span></li>
+          <li><span>Friendly fallback if the AI is unavailable</span></li>
           <li><span>Secure sign-in</span></li>
           <li><span>Privacy-first data handling</span></li>
         </ul>
       </section>
 
       <section class="page-shell page-section case-section" aria-labelledby="kai-decisions-heading">
-        <p class="eyebrow">Design decisions</p>
+        <p class="eyebrow">Design Decisions</p>
         <h2 id="kai-decisions-heading">Small choices that make the experience feel more considered.</h2>
         <div class="case-decisions">
           <article>
@@ -108,28 +124,32 @@
           </article>
           <article>
             <h3>Mood trends</h3>
-            <p>I used sentiment scoring and mood-trend charts to make changes in mood visible over time.</p>
+            <p>Sentiment scoring and mood-trend charts make mood patterns available to reflect on.</p>
           </article>
           <article>
-            <h3>A friendly fallback</h3>
-            <p>If the AI is unavailable, a friendly fallback keeps the experience from ending with a dead end.</p>
+            <h3>A graceful fallback</h3>
+            <p>If the AI is unavailable, a friendly fallback keeps the experience from ending at a dead end.</p>
           </article>
           <article>
             <h3>Privacy-first sign-in</h3>
-            <p>I included secure sign-in and privacy-first handling because personal wellness data needs care.</p>
+            <p>Secure sign-in and privacy-first data handling give personal wellness information careful treatment.</p>
           </article>
         </div>
       </section>
 
-      <!-- TODO: add 3 real Kai screenshots as polaroid-frame figures with descriptive alt text. -->
+      <!-- TODO: add screenshots. -->
 
       <section class="page-shell page-section case-section" aria-labelledby="kai-learning-heading">
-        <p class="eyebrow">What I learned</p>
+        <p class="eyebrow">What I Learned</p>
         <h2 id="kai-learning-heading">An experience should feel easy and kind to use.</h2>
         <p>Building Kai showed me that what I love most is making a product feel easy and kind to use.</p>
       </section>
 
-      <!-- TODO: add next steps when the project roadmap is confirmed. -->
+      <!-- TODO: add what's next when the project roadmap is confirmed. -->
+
+      <nav class="page-shell page-section" aria-label="Other case studies">
+        <a class="btn btn--secondary" href="quiz-buddy.html">Next case study: Quiz Buddy</a>
+      </nav>
     </main>
 
     <footer class="site-footer">
@@ -157,6 +177,15 @@
       </div>
     </footer>
 
+    <script>
+      document.querySelectorAll("[data-project-link]").forEach((link) => {
+        const url = PROJECT_LINKS[link.dataset.projectLink];
+        if (typeof url === "string" && /^https:\/\/[^\s]+$/i.test(url)) {
+          link.href = url;
+          link.style.display = "";
+        }
+      });
+    </script>
     <script src="../js/main.js"></script>
   </body>
 </html>
