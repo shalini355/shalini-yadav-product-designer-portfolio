@@ -1,0 +1,73 @@
+:root {
+  --color-bg: #f7f6f2;
+  --color-surface: #efeee9;
+  --color-surface-strong: #e8e6df;
+  --color-surface-card: #fcfbf8;
+  --color-border: #dfded7;
+  --color-border-strong: #c4c2b9;
+  --color-text: #20201e;
+  --color-text-muted: #51514c;
+  --color-text-soft: #6c6b64;
+  --color-primary: #4937d4;
+  --color-primary-strong: #3827bd;
+  --color-primary-soft: #e9e6ff;
+  --color-secondary: #51514c;
+  --color-secondary-soft: #eeece7;
+  --color-tertiary: #51514c;
+  --color-tertiary-soft: #e9e7e1;
+  --color-accent-blush: #eeece7;
+  --color-overlay: rgba(247, 246, 242, 0.94);
+  --color-shadow: rgba(32, 32, 30, 0.04);
+  --color-success: var(--color-primary);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+
+  --type-small: 0.75rem;
+  --type-body: 1rem;
+  --type-lead: 1.25rem;
+  --type-h3: 1.75rem;
+  --type-h2: 2.75rem;
+  --type-display: clamp(3rem, 6vw, 5.5rem);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-7: 3.5rem;
+  --space-8: 4rem;
+  --space-9: 4.5rem;
+  --space-10: 5rem;
+  --space-12: 6rem;
+  --space-14: 7rem;
+  --space-16: 8rem;
+  --space-20: 10rem;
+  --space-24: 12rem;
+  --space-28: 14rem;
+  --space-32: 16rem;
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 9999px;
+
+  --container-width: 1320px;
+  --page-gutter: clamp(1rem, 5vw, 4rem);
+  --page-width: min(var(--container-width), calc(100% - var(--page-gutter) - var(--page-gutter)));
+  --grid-gap: clamp(1.5rem, 3vw, 2.5rem);
+  --section-padding: clamp(4rem, 7vw, 6rem);
+  --card-radius: var(--radius-sm);
+  --card-padding: clamp(1.5rem, 3vw, 2rem);
+  --card-border: 1px solid rgba(32, 32, 30, 0.12);
+  --control-radius: 0.55rem;
+  --header-height: 5.5rem;
+  --section-gap: var(--section-padding);
+  --content-width: 66rem;
+
+  --shadow-soft: 0 18px 44px -24px rgba(32, 32, 30, 0.12);
+  --shadow-card: 0 8px 22px rgba(32, 32, 30, 0.06);
+  --border-soft: 1px solid var(--color-border);
+}
