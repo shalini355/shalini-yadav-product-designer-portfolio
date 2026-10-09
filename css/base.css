@@ -39,7 +39,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  line-height: 1.7;
+  line-height: 1.65;
   font-size: var(--type-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -122,28 +122,33 @@ ol {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.12;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 h1 {
   font-size: var(--type-display);
-  line-height: 1.02;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: var(--type-h2);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 h3 {
   font-size: var(--type-h3);
+  line-height: 1.2;
+  letter-spacing: 0;
 }
 
 p {
   color: var(--color-text-muted);
   max-width: 65ch;
   font-size: var(--type-body);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .container,

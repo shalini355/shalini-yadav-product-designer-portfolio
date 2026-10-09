@@ -1,35 +1,50 @@
 :root {
-  --color-bg: #fff9ef;
-  --color-surface: #fff3e0;
-  --color-surface-strong: #fde9cf;
-  --color-surface-card: #fffcf6;
-  --color-border: rgba(30, 35, 71, 0.15);
-  --color-border-strong: rgba(30, 35, 71, 0.3);
-  --color-text: #1e2347;
-  --color-text-muted: #5a5f7d;
-  --color-text-soft: #5a5f7d;
-  --color-primary: #ff8a3d;
-  --color-primary-strong: #a8d672;
-  --color-primary-soft: #cdbfff;
-  --color-secondary: #5a5f7d;
-  --color-secondary-soft: #ffe3ee;
-  --color-tertiary: #5a5f7d;
-  --color-tertiary-soft: #eaf4da;
-  --color-accent-blush: #ffe3ee;
-  --color-overlay: rgba(255, 249, 239, 0.94);
-  --color-shadow: rgba(30, 35, 71, 0.04);
+  /* ── Surfaces ──────────────────────────────────────── */
+  --color-bg: #f0eef8;
+  --color-surface: #e8e4f4;
+  --color-surface-strong: #ddd8f0;
+  --color-surface-card: #faf9ff;
+  --color-border: rgba(28, 27, 34, 0.1);
+  --color-border-strong: rgba(28, 27, 34, 0.25);
+
+  /* ── Text ──────────────────────────────────────────── */
+  --color-text: #1c1b22;
+  --color-text-muted: #4a4860;
+  --color-text-soft: #6b6880;
+
+  /* ── Brand colours ─────────────────────────────────── */
+  --color-primary: #3b2fc9;
+  --color-primary-strong: #1c1b22;
+  --color-primary-soft: #e4defa;
+
+  /* secondary = blush pink */
+  --color-secondary: #a0607a;
+  --color-secondary-soft: #f6d5dd;
+
+  /* tertiary = pale lavender */
+  --color-tertiary: #6b6880;
+  --color-tertiary-soft: #e4defa;
+
+  --color-accent-blush: #f6d5dd;
+  --color-overlay: rgba(240, 238, 248, 0.94);
+  --color-shadow: rgba(28, 27, 34, 0.06);
   --color-success: var(--color-primary);
 
+  /* ── Fonts ─────────────────────────────────────────── */
   --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
 
+  /* ── Type scale ────────────────────────────────────── */
   --type-small: 0.75rem;
-  --type-body: 1rem;
+  --type-body: 1.0625rem;
   --type-lead: 1.25rem;
-  --type-h3: 1.75rem;
-  --type-h2: 2.75rem;
-  --type-display: clamp(3rem, 6vw, 5.5rem);
+  --type-h3: clamp(1.4rem, 2.5vw, 1.9rem);
+  --type-h2: clamp(2rem, 4vw, 3.2rem);
+  --type-display: clamp(2.6rem, 6vw, 5rem);
+  --type-hand: 1.4rem;
 
+  /* ── Spacing ───────────────────────────────────────── */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -48,26 +63,37 @@
   --space-28: 14rem;
   --space-32: 16rem;
 
+  /* ── Radii ─────────────────────────────────────────── */
   --radius-xs: 0.25rem;
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-pill: 9999px;
 
-  --container-width: 1320px;
-  --page-gutter: clamp(1rem, 5vw, 4rem);
-  --page-width: min(var(--container-width), calc(100% - var(--page-gutter) - var(--page-gutter)));
+  /* ── Layout ────────────────────────────────────────── */
+  --container-width: 1200px;
+  --page-gutter: 1.5rem;
+  --page-width: min(var(--container-width), calc(100% - var(--page-gutter) * 2));
   --grid-gap: clamp(1.5rem, 3vw, 2.5rem);
   --section-padding: clamp(4rem, 7vw, 6rem);
-  --card-radius: var(--radius-sm);
+  --card-radius: var(--radius-lg);
   --card-padding: clamp(1.5rem, 3vw, 2rem);
-  --card-border: 1px solid rgba(30, 35, 71, 0.12);
-  --control-radius: 0.55rem;
-  --header-height: 5.5rem;
+  --card-border: 1px solid rgba(28, 27, 34, 0.08);
+  --control-radius: var(--radius-pill);
+  --header-height: 5rem;
   --section-gap: var(--section-padding);
   --content-width: 66rem;
 
-  --shadow-soft: 0 18px 44px -24px rgba(30, 35, 71, 0.12);
-  --shadow-card: 0 8px 22px rgba(30, 35, 71, 0.06);
+  /* ── Shadows ───────────────────────────────────────── */
+  --shadow-soft: 0 18px 44px -24px rgba(28, 27, 34, 0.14);
+  --shadow-card: 0 8px 30px -4px rgba(28, 27, 34, 0.08);
   --border-soft: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  :root { --page-gutter: 2rem; }
+}
+
+@media (min-width: 1024px) {
+  :root { --page-gutter: 3rem; }
 }
