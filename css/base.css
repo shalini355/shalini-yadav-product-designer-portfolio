@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -119,28 +121,33 @@ ol {
   color: var(--color-text);
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
-  letter-spacing: -0.02em;
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 h1 {
   font-size: var(--type-display);
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   font-size: var(--type-h2);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 h3 {
   font-size: var(--type-h3);
   line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h4, h5, h6 {
+  line-height: 1.3;
   letter-spacing: 0;
 }
 

@@ -31,8 +31,8 @@
   --color-success: var(--color-primary);
 
   /* ── Fonts ─────────────────────────────────────────── */
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-hand: "Caveat", cursive;
 
   /* ── Type scale ────────────────────────────────────── */
