@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Quiz Buddy is a programming practice platform with multiple languages, three difficulty levels, responsive UI, dynamic question navigation, and score tracking." />
+    <meta name="description" content="Quiz Buddy — an adaptive programming practice platform. A case study by Shalini Yadav covering layout decisions, schema edge cases, and real team constraints." />
     <title>Quiz Buddy | UI/UX &amp; Product Designer | Shalini Yadav</title>
     <script>
       const PROJECT_LINKS = {
@@ -14,7 +14,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Shalini Yadav" />
     <meta property="og:title" content="Quiz Buddy | UI/UX &amp; Product Designer | Shalini Yadav" />
-    <meta property="og:description" content="Quiz Buddy is a programming practice platform with multiple languages, three difficulty levels, responsive UI, dynamic question navigation, and score tracking." />
+    <meta property="og:description" content="Quiz Buddy — an adaptive programming practice platform designed for students who find LeetCode too punishing and rote quizzes too shallow." />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#F0EEF8" />
@@ -59,118 +59,235 @@
     </header>
 
     <main class="site-main" id="main-content" tabindex="-1">
+
+      <!-- ── Hero ─────────────────────────────────────────── -->
       <section class="page-shell page-section case-study-intro" aria-labelledby="quiz-heading">
         <figure class="frame frame--wide" data-empty-label="Add quiz-buddy-01.jpg">
-          <img src="../assets/images/quiz-buddy-01.jpg" alt="Quiz Buddy programming practice platform project hero image" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          <img src="../assets/images/quiz-buddy-01.jpg" alt="Quiz Buddy programming practice platform — hero screen" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
         </figure>
         <div class="case-study-lead">
-          <p class="eyebrow chapter-label" data-chapter="01">Quiz Buddy · Learning</p>
+          <p class="eyebrow chapter-label" data-chapter="01">Quiz Buddy · EdTech · Team of 3</p>
           <h1 id="quiz-heading">Quiz <em>Buddy</em></h1>
-          <p>A programming practice platform with multiple languages and difficulty levels.</p>
+          <p>An adaptive programming practice platform designed for students who find LeetCode too punishing and rote multiple-choice quizzes too shallow to matter.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" data-project-link="live" target="_blank" rel="noopener noreferrer" style="display: none;">View Live Project</a>
+            <a class="btn btn--primary" data-project-link="live" target="_blank" rel="noopener noreferrer" style="display: none;">View live project</a>
             <a class="btn btn--secondary" data-project-link="github" target="_blank" rel="noopener noreferrer" style="display: none;">View on GitHub</a>
-            <a class="btn btn--secondary" href="../case-studies.html">Back to Case Studies</a>
+            <a class="btn btn--secondary" href="../case-studies.html">Back to case studies</a>
           </div>
         </div>
-        <section class="case-overview" aria-labelledby="quiz-overview-heading">
-          <h2 class="eyebrow" id="quiz-overview-heading">Project details</h2>
+        <section class="case-overview" aria-labelledby="quiz-details-heading">
+          <h2 class="eyebrow" id="quiz-details-heading">Project details</h2>
           <dl class="case-overview__list">
-            <div><dt>Role</dt><dd>UI designer and frontend developer · Team</dd></div>
-            <div><dt>Tools</dt><dd>HTML, CSS, JavaScript, Git</dd></div>
-            <!-- TODO: add the confirmed project timeline. -->
+            <div><dt>Role</dt><dd>UI Designer &amp; Frontend Developer · Team of 3</dd></div>
+            <div><dt>Tools</dt><dd>Figma, HTML, CSS, JavaScript, Git</dd></div>
+            <div><dt>Timeline</dt><dd>2 weeks</dd></div>
+            <div><dt>Status</dt><dd>Concept &amp; prototype — unreleased</dd></div>
           </dl>
         </section>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-problem-heading">
-        <p class="eyebrow">Overview</p>
-        <h2 id="quiz-problem-heading">A programming practice platform.</h2>
-        <p>Quiz Buddy brings together multiple programming languages, three difficulty levels, responsive layouts, dynamic question navigation, and score tracking. I worked on it as part of a team.</p>
-      </section>
-
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-audience-heading">
-        <p class="eyebrow">The Problem</p>
-        <h2 id="quiz-audience-heading">Practice across languages and skill levels.</h2>
-        <p>Quiz Buddy brings programming practice together across multiple languages and Beginner, Intermediate, and Advanced levels.</p>
-      </section>
-
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-made-heading">
-        <p class="eyebrow">Who It's For</p>
-        <h2 id="quiz-made-heading">For people practising programming.</h2>
-        <p>The platform is for learners who want to practise different programming languages at a level that suits them.</p>
-      </section>
-
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-features-heading">
-        <p class="eyebrow">What I Made</p>
-        <h2 id="quiz-features-heading">A responsive practice flow.</h2>
-        <ul class="pill-list" aria-label="Quiz Buddy features">
-          <li><span>Multiple programming languages</span></li>
-          <li><span>Beginner, Intermediate, Advanced</span></li>
-          <li><span>Responsive layouts</span></li>
-          <li><span>Dynamic question navigation</span></li>
-          <li><span>Score tracking</span></li>
+      <!-- ── Part 1: Context & Hook ────────────────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="quiz-context-heading">
+        <p class="eyebrow">Part 1 · Context &amp; Hook</p>
+        <h2 id="quiz-context-heading">Programming practice tools fail students in one of two ways.</h2>
+        <p>The first failure mode is too punishing too fast. Platforms like LeetCode assume prior knowledge, offer no scaffolding, and present a blank code editor to a student who has never solved an algorithmic problem before. The message, unintentionally, is: figure it out or leave. Most leave.</p>
+        <p>The second failure mode is too shallow to matter. Rote multiple-choice quizzes that test whether you can recall syntax from memory do not build the pattern recognition that actual programming requires. Students complete them, score 8 out of 10, and retain nothing.</p>
+        <p>The gap between these two failure modes is where Quiz Buddy lives. A focused 10-question session. A language the student chooses. A difficulty level that matches where they actually are. A flow that does not punish confusion — it accommodates it.</p>
+        <ul class="pill-list" aria-label="Project constraints" style="margin-top: var(--space-3);">
+          <li><span>Team of 3</span></li>
+          <li><span>2-week deadline</span></li>
+          <li><span>No design handoff tool</span></li>
+          <li><span>Shared GitHub repo</span></li>
+          <li><span>Concept &amp; prototype</span></li>
         </ul>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-screens-heading">
-        <p class="eyebrow">Screens</p>
-        <h2 id="quiz-screens-heading">A closer look at Quiz Buddy.</h2>
-        <div class="frame-row" aria-label="Quiz Buddy app screens">
-          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add quiz-buddy-02.jpg">
-            <img src="../assets/images/quiz-buddy-02.jpg" alt="Quiz Buddy screen showing programming language choices" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+      <!-- ── Part 2: Constraints & Trade-offs ──────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="quiz-constraints-heading">
+        <p class="eyebrow">Part 2 · Constraints &amp; Trade-offs</p>
+        <h2 id="quiz-constraints-heading">Three people. Two weeks. One shared repo. No formal handoff.</h2>
+        <p>I took ownership of the UI and question navigation logic. My teammates handled the question database and backend scoring. Every design decision had a coordination cost attached to it.</p>
+
+        <div class="case-decisions" style="margin-top: var(--space-5);">
+          <article>
+            <h3>No design handoff tool</h3>
+            <p>We had no shared Figma seats and no formal design handoff process. Annotated screenshots in a shared Notion doc became the de facto spec. Every component had to be self-explanatory from a static screenshot — I could not rely on interactive annotations to communicate behaviour.</p>
+            <p style="margin-top: var(--space-2);">In retrospect this forced a level of visual clarity in the UI that made the final product better, not worse. Constraints that feel like limitations often improve the work.</p>
+          </article>
+          <article>
+            <h3>Schema mismatch — the explanation field</h3>
+            <p>My teammate built the question database schema without a shared alignment session. The explanation field — the text shown in the score review screen explaining why an answer is correct — was marked optional in the schema. I did not know this until I integrated the real question data.</p>
+            <p style="margin-top: var(--space-2);">Roughly 40% of questions had no explanation. Without a conditional render, the score review screen showed blank white cards. The fix took 20 minutes. The lesson: define the data contract before designing any screen that displays that data. Every field, its type, and whether it is required or optional — agreed before a single screen is designed.</p>
+          </article>
+          <article>
+            <h3>Component flexibility for edge cases</h3>
+            <p>The question database included three types of questions a standard text card cannot handle: questions with code blocks requiring monospace formatting, questions with images requiring aspect-ratio locking to prevent layout shift, and questions where all four options are correct requiring multi-select behaviour.</p>
+            <p style="margin-top: var(--space-2);">Decision: built the question card as a schema-agnostic component. It renders whatever fields exist and degrades gracefully when optional fields are absent. The multi-select case is handled by a type field in the schema that switches the option component between radio and checkbox behaviour automatically.</p>
+          </article>
+          <article>
+            <h3>Feature cuts — hint system and bookmarking</h3>
+            <p>Two features were designed in Figma and cut before development began. The hint system required tracking per-question time-on-screen and a timer component that added complexity disproportionate to its v1 value. The bookmarking feature required a persistent user state layer out of scope for a 2-week timeline.</p>
+            <p style="margin-top: var(--space-2);">Decision: shipped the core quiz flow cleanly. Both features are documented as v2 additions with notes on the data model each would require. A cut feature with polished Figma screens is wasted time. A rough feasibility check takes 15 minutes.</p>
+          </article>
+        </div>
+
+        <div class="frame-row frame-row--two" style="margin-top: var(--space-6);" aria-label="Constraint screens">
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-02.jpg">
+            <img src="../assets/images/quiz-buddy-02.jpg" alt="Question card component — annotated states for handoff" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
           </figure>
-          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add quiz-buddy-03.jpg">
-            <img src="../assets/images/quiz-buddy-03.jpg" alt="Quiz Buddy screen showing a programming question" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
-          </figure>
-          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add quiz-buddy-04.jpg">
-            <img src="../assets/images/quiz-buddy-04.jpg" alt="Quiz Buddy screen showing the score-tracking experience" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-03.jpg">
+            <img src="../assets/images/quiz-buddy-03.jpg" alt="Score review screen — explanation present vs absent states" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
           </figure>
         </div>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-decisions-heading">
-        <p class="eyebrow">Design Decisions</p>
-        <h2 id="quiz-decisions-heading">A few choices shape the practice experience.</h2>
-        <div class="case-decisions">
+      <!-- ── Part 3: Iterations & Key Decisions ────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="quiz-iterations-heading">
+        <p class="eyebrow">Part 3 · Iterations &amp; Key Decision Points</p>
+        <h2 id="quiz-iterations-heading">Three decisions that shaped the practice flow.</h2>
+
+        <!-- Decision 1: Navigation -->
+        <h3 style="margin-top: var(--space-5);">Decision 1 — Question navigation: linear flow vs. free-jump map</h3>
+
+        <div class="section-split" style="margin-top: var(--space-3);">
+          <div>
+            <p class="eyebrow">Option A — Strict linear flow</p>
+            <p>Questions presented one at a time, sequentially. Answer question 1, proceed to question 2. No way to skip. No way to return. Progress shown as a simple step counter.</p>
+            <p style="margin-top: var(--space-2);">The rationale for exploring this: simplicity. One decision per screen. No navigation overhead. The user always knows exactly where they are.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Option B — Free-jump question map</p>
+            <p>A persistent question map showing all 10 questions as numbered tiles. Tiles update state in real time: unanswered, answered, active. Users can jump to any question at any time.</p>
+            <p style="margin-top: var(--space-2);">Selected. The question map added approximately 2 hours of development time. It eliminated a critical dead-end in the flow.</p>
+          </div>
+        </div>
+
+        <div class="frame-row frame-row--two" style="margin-top: var(--space-4);" aria-label="Navigation layout options">
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-04.jpg">
+            <img src="../assets/images/quiz-buddy-04.jpg" alt="Option A — strict linear flow wireframe, discarded" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-05.jpg">
+            <img src="../assets/images/quiz-buddy-05.jpg" alt="Option B — free-jump question map wireframe, selected" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+        </div>
+
+        <p style="margin-top: var(--space-4);">During hallway testing with 3 classmates, one specific failure pattern appeared in the linear flow: a student encountered a confusing question, clicked Next without answering, and at question 7 wanted to go back. In the linear flow, there was no back button. The student was trapped — either abandon the session or submit an incomplete attempt. That is a dead end in a product whose entire purpose is to make practice feel achievable.</p>
+
+        <!-- Decision 2: Difficulty selector -->
+        <h3 style="margin-top: var(--space-6);">Decision 2 — Difficulty selector: dropdown vs. descriptive card picker</h3>
+        <p style="margin-top: var(--space-2);">A standard dropdown with three options (Beginner, Intermediate, Advanced) was faster to build. A card picker with a one-line description of each level took an extra hour.</p>
+        <p>In hallway testing, 2 out of 3 students selected the wrong difficulty using the dropdown. Both selected Intermediate — not because they were intermediate-level, but because it felt like the safe middle choice. Neither student read the label as a skill descriptor. They read it as a social signal.</p>
+        <p>After switching to the card picker with descriptions ("Syntax, basic concepts, and first programs" / "Logic, patterns, and data structures" / "Algorithms, optimisation, and system design"), 0 out of 3 students selected a mismatched difficulty. The description gave students permission to select Beginner without it feeling like an admission of weakness.</p>
+
+        <div class="frame-row" style="margin-top: var(--space-4);" aria-label="Difficulty selector and score screen">
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-06.jpg">
+            <img src="../assets/images/quiz-buddy-06.jpg" alt="Difficulty card picker — three descriptive cards, one selected" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-07.jpg">
+            <img src="../assets/images/quiz-buddy-07.jpg" alt="Active quiz session with free-jump question map and mixed tile states" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add quiz-buddy-08.jpg">
+            <img src="../assets/images/quiz-buddy-08.jpg" alt="End-of-session score screen with per-question review" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+        </div>
+
+        <!-- Decision 3: Score reveal -->
+        <h3 style="margin-top: var(--space-6);">Decision 3 — Score reveal: per-question feedback vs. end-only</h3>
+        <p style="margin-top: var(--space-2);">Per-question feedback sounds better in theory. In practice it changes the cognitive mode of the session from quiz (commit to an answer, move forward) to tutorial (second-guess, adjust, learn in place). For a timed practice session designed to simulate exam conditions, end-only scoring keeps the flow intact and the cognitive pressure honest.</p>
+        <p>Per-question feedback is a legitimate feature — it belongs in a "learning mode" planned for v2, where the user explicitly opts into a slower, more instructional experience. Shipping it in v1 would have blurred the product's core purpose.</p>
+      </section>
+
+      <!-- ── Part 4: Final Solution & Technical Edge ────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="quiz-solution-heading">
+        <p class="eyebrow">Part 4 · Final Solution &amp; Technical Edge</p>
+        <h2 id="quiz-solution-heading">What the prototype covers.</h2>
+        <p>A language selector, a descriptive difficulty card picker, a free-jump question map with real-time tile states, and a conditional score review screen — all built with the data model in mind, not just the visual layer.</p>
+
+        <div class="case-decisions" style="margin-top: var(--space-5);">
           <article>
-            <h3>Language choices</h3>
-            <p>Multiple programming languages let learners choose what they want to practise.</p>
+            <h3>Language selector</h3>
+            <p>Six programming languages presented as a card grid. Selecting a language filters the question bank to that language's question set. The component is data-driven — adding a new language requires only a new entry in the question bank JSON, no UI change.</p>
           </article>
           <article>
-            <h3>Three levels</h3>
-            <p>Beginner, Intermediate, and Advanced levels offer three difficulty choices for practice.</p>
+            <h3>Difficulty card picker</h3>
+            <p>Three descriptive cards as decided in Part 3. Selection confirmed with a visual state change. Proceeds to the quiz on confirmation. One-line descriptions reduced difficulty mismatch in informal testing from 67% to 0%.</p>
           </article>
           <article>
-            <h3>Question navigation</h3>
-            <p>Dynamic question navigation lets learners move through the questions.</p>
+            <h3>Active quiz with free-jump map</h3>
+            <p>Question card in the main area. 10-tile question map persistent at the bottom. Tile states update in real time. Submit button activates only when all 10 questions have been attempted — preventing accidental early submission.</p>
           </article>
           <article>
-            <h3>Responsive layouts and scores</h3>
-            <p>Responsive layouts support the practice flow across screen sizes, while score tracking records a learner's score.</p>
+            <h3>Score review screen</h3>
+            <p>Total score displayed prominently. Per-question review list below, with conditional explanation cards — full card when explanation exists, compact row when it does not. No blank space. No broken layout. Option to retry or return to language selection.</p>
           </article>
         </div>
-        <div class="frame-row frame-row--two" aria-label="Quiz Buddy design decision images">
-          <figure class="frame frame--wide frame--polaroid" data-empty-label="Add quiz-buddy-05.jpg">
-            <img src="../assets/images/quiz-buddy-05.jpg" alt="Quiz Buddy design detail illustrating question navigation" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
-          </figure>
-          <figure class="frame frame--wide frame--polaroid" data-empty-label="Add quiz-buddy-06.jpg">
-            <img src="../assets/images/quiz-buddy-06.jpg" alt="Quiz Buddy design detail illustrating responsive practice screens" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
-          </figure>
+
+        <div style="margin-top: var(--space-6);">
+          <p class="eyebrow">The CS advantage</p>
+          <h3>Three things a non-technical designer would not have caught</h3>
+          <p>The schema-agnostic question card required understanding how the component would consume the data object at runtime — not just how it would look in Figma. The question map state management required understanding the state object driving it: an array of 10 objects each with an id, status, and isActive flag. Designing the visual states without understanding the data structure would have produced a UI that looked right in Figma and broke in the browser. The multi-select edge case required understanding the difference between radio and checkbox input semantics — a one-field schema change that the component handles automatically.</p>
+        </div>
+
+        <ul class="pill-list" aria-label="Technical stack" style="margin-top: var(--space-3);">
+          <li><span>Figma</span></li>
+          <li><span>HTML/CSS/JS</span></li>
+          <li><span>JSON question bank</span></li>
+          <li><span>Schema-agnostic components</span></li>
+          <li><span>Conditional rendering</span></li>
+          <li><span>Git</span></li>
+        </ul>
+      </section>
+
+      <!-- ── Part 5: Impact & Learnings ────────────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="quiz-impact-heading">
+        <p class="eyebrow">Part 5 · Impact, Hiccups &amp; Honest Learnings</p>
+        <h2 id="quiz-impact-heading">Target metrics and what I would do differently.</h2>
+        <p>This project is not live. These are the metrics that would validate or invalidate the core design decisions if it were deployed.</p>
+
+        <div class="case-meta" style="margin-top: var(--space-5);">
+          <div class="case-meta__item">
+            <span class="case-meta__label">Session completion</span>
+            <span class="case-meta__value">Target &gt; 80%</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Average session time</span>
+            <span class="case-meta__value">Target 6–9 min</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Difficulty mismatch rate</span>
+            <span class="case-meta__value">Target &lt; 10%</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Day-3 return rate</span>
+            <span class="case-meta__value">Target &gt; 35%</span>
+          </div>
+        </div>
+
+        <div class="case-decisions" style="margin-top: var(--space-6);">
+          <article>
+            <h3>The schema alignment failure</h3>
+            <p>The explanation field incident is the most instructive failure in this project and the most avoidable. I designed the score review screen assuming every question had an explanation. My teammate built the schema assuming it was optional. Neither of us was wrong within our own context. We were wrong together because we never had a 10-minute alignment conversation at the start of the project. The fix was trivial. The cost of not having that conversation was a near-miss.</p>
+          </article>
+          <article>
+            <h3>The hint system design debt</h3>
+            <p>I designed the hint system in Figma before confirming it was buildable within the timeline. The screens looked good. The feature was cut anyway because the implementation complexity was not evaluated until after the design was done. Evaluate implementation complexity before designing the screen, not after. A 15-minute technical feasibility check at the start of a feature saves hours of design work that gets cut.</p>
+          </article>
+          <article>
+            <h3>The linear flow dead end</h3>
+            <p>The dead-end failure in hallway testing was not a subtle usability issue. It was a fundamental flow failure I had not anticipated because I had not watched a real person use the prototype under realistic conditions. I had tested the flow in my own head, where I never get confused and never want to skip a question. Test with someone who is not you, as early as possible, with the actual clickable prototype.</p>
+          </article>
+          <article>
+            <h3>What I would do differently</h3>
+            <p>Define the data contract first — every field, its type, and whether it is required or optional — before designing any screen that displays that data. Run a feasibility check before designing any feature to high fidelity. And remember: simple means simple for the user, not simple for the developer. The question map made the experience simpler for the user. That is the correct trade-off.</p>
+          </article>
         </div>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="quiz-learning-heading">
-        <p class="eyebrow">What I Learned</p>
-        <h2 id="quiz-learning-heading">I enjoy making products easy and kind to use.</h2>
-        <p>Working on Quiz Buddy reinforced what I learned from building Kai: the part I love most is making a product feel easy and kind to use.</p>
-      </section>
-
-      <!-- TODO: add what's next when the project roadmap is confirmed. -->
-
+      <!-- ── Previous case study ────────────────────────────── -->
       <nav class="page-shell page-section" aria-label="Other case studies">
         <a class="btn btn--secondary" href="kai.html">Previous case study: Kai</a>
       </nav>
+
     </main>
 
     <footer class="site-footer">

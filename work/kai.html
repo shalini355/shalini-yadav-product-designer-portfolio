@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="I designed Kai, an AI wellness companion with English and Hinglish chat and a focus on privacy." />
+    <meta name="description" content="Kai — an AI mood reflection companion designed for Hinglish-speaking students. A case study by Shalini Yadav covering layout decisions, API edge cases, and real constraints." />
     <title>Kai | UI/UX &amp; Product Designer | Shalini Yadav</title>
     <script>
       const PROJECT_LINKS = {
-        live: "[PASTE KAI VERCEL LINK]",
+        live: "https://kai-version-2-0.vercel.app/",
         github: "[PASTE KAI GITHUB LINK]"
       };
     </script>
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Shalini Yadav" />
     <meta property="og:title" content="Kai | UI/UX &amp; Product Designer | Shalini Yadav" />
-    <meta property="og:description" content="I designed Kai, an AI wellness companion with English and Hinglish chat and a focus on privacy." />
+    <meta property="og:description" content="Kai — an AI mood reflection companion designed for Hinglish-speaking students." />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#F0EEF8" />
@@ -59,118 +59,226 @@
     </header>
 
     <main class="site-main" id="main-content" tabindex="-1">
+
+      <!-- ── Hero ─────────────────────────────────────────── -->
       <section class="page-shell page-section case-study-intro" aria-labelledby="kai-heading">
-        <figure class="frame frame--wide" data-empty-label="Add kai-01.jpg">
-          <img src="../assets/images/kai-01.jpg" alt="Kai wellness companion project hero image" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+        <figure class="frame frame--wide" >
+          <img src="../assets/images/kai-cover.jpg" alt="Kai wellness companion — hero screen" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
         </figure>
         <div class="case-study-lead">
-          <p class="eyebrow chapter-label" data-chapter="01">Kai · Wellness</p>
+          <p class="eyebrow chapter-label" data-chapter="01">Kai · Wellness · Solo</p>
           <h1 id="kai-heading"><em>Kai</em></h1>
-          <p>An empathetic AI wellness companion for English and Hinglish chat, mood reflection, and private personal data.</p>
+          <p>An AI mood reflection companion that speaks Hinglish — designed for students who think and feel in a language most wellness apps ignore.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" data-project-link="live" target="_blank" rel="noopener noreferrer" style="display: none;">View Live Project</a>
+            <a class="btn btn--primary" data-project-link="live" target="_blank" rel="noopener noreferrer" style="display: none;">View live project</a>
             <a class="btn btn--secondary" data-project-link="github" target="_blank" rel="noopener noreferrer" style="display: none;">View on GitHub</a>
-            <a class="btn btn--secondary" href="../case-studies.html">Back to Case Studies</a>
+            <a class="btn btn--secondary" href="../case-studies.html">Back to case studies</a>
           </div>
         </div>
         <section class="case-overview" aria-labelledby="kai-details-heading">
           <h2 class="eyebrow" id="kai-details-heading">Project details</h2>
           <dl class="case-overview__list">
-            <div><dt>Role</dt><dd>Designer and developer · Solo</dd></div>
-            <!-- TODO: add confirmed Kai tools and timeline. -->
+            <div><dt>Role</dt><dd>Ideation, IA, UI/UX Design · Solo</dd></div>
+            <div><dt>Tools</dt><dd>Figma, Firebase, Chart.js, HTML/CSS/JS</dd></div>
+            <div><dt>Timeline</dt><dd>4 weeks</dd></div>
+            <div><dt>Status</dt><dd>Concept &amp; prototype — unreleased</dd></div>
           </dl>
         </section>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="kai-overview-heading">
-        <p class="eyebrow">Overview</p>
-        <h2 id="kai-overview-heading">A companion for chat and mood reflection.</h2>
-        <p>Kai combines English and Hinglish chat with sentiment scoring and mood-trend charts. It also includes a friendly fallback when the AI is unavailable, secure sign-in, and privacy-first handling of personal data.</p>
-      </section>
-
-      <section class="page-shell page-section case-section" aria-labelledby="kai-problem-heading">
-        <p class="eyebrow">The Problem</p>
-        <h2 id="kai-problem-heading">Wellness chat should feel considerate and private.</h2>
-        <p>Kai brings chat, mood reflection, and secure sign-in together, while accounting for moments when the AI is unavailable.</p>
-      </section>
-
-      <section class="page-shell page-section case-section" aria-labelledby="kai-audience-heading">
-        <p class="eyebrow">Who It's For</p>
-        <h2 id="kai-audience-heading">For people who want a private space to reflect.</h2>
-        <p>Kai is for people who want to chat in English or Hinglish and keep their wellness reflections private.</p>
-      </section>
-
-      <section class="page-shell page-section case-section" aria-labelledby="kai-made-heading">
-        <p class="eyebrow">What I Made</p>
-        <h2 id="kai-made-heading">Chat, mood trends, and thoughtful fallbacks.</h2>
-        <ul class="pill-list" aria-label="Kai features">
-          <li><span>English and Hinglish chat</span></li>
-          <li><span>Sentiment scoring</span></li>
-          <li><span>Mood-trend charts</span></li>
-          <li><span>Friendly fallback if the AI is unavailable</span></li>
-          <li><span>Secure sign-in</span></li>
-          <li><span>Privacy-first data handling</span></li>
+      <!-- ── Part 1: Context & Hook ────────────────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="kai-context-heading">
+        <p class="eyebrow">Part 1 · Context &amp; Hook</p>
+        <h2 id="kai-context-heading">The problem nobody was naming.</h2>
+        <p>Mental wellness apps in India have a language problem. Every major platform — Wysa, YourDOST, Headspace — is built in formal English. But most urban Indian students do not <em>feel</em> in formal English. They feel in Hinglish. When something goes wrong, the internal monologue is not "I am experiencing significant academic stress today." It is "yaar aaj bahut stressed tha, pata nahi kya ho raha hai."</p>
+        <p>That gap — between how a user actually feels and the language the product forces them to use — is not a minor UX inconvenience. It is the reason people open a wellness app once and never return. The product does not feel like it is talking <em>to</em> them. It feels like a form they have to fill out.</p>
+        <p>The design objective was specific: build a chat interface where a student can type in natural Hinglish and receive a response that feels warm, contextually aware, and private — not clinical, not translated, not corrected.</p>
+        <ul class="pill-list" aria-label="Project constraints" style="margin-top: var(--space-3);">
+          <li><span>Solo project</span></li>
+          <li><span>Zero research budget</span></li>
+          <li><span>Free-tier API limits</span></li>
+          <li><span>4-week timeline</span></li>
+          <li><span>Concept &amp; prototype</span></li>
         </ul>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="kai-screens-heading">
-        <p class="eyebrow">Screens</p>
-        <h2 id="kai-screens-heading">A closer look at Kai.</h2>
-        <div class="frame-row" aria-label="Kai app screens">
-          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add kai-02.jpg">
-            <img src="../assets/images/kai-02.jpg" alt="Kai app screen showing a wellness conversation" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+      <!-- ── Part 2: Constraints & Trade-offs ──────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="kai-constraints-heading">
+        <p class="eyebrow">Part 2 · Constraints &amp; Trade-offs</p>
+        <h2 id="kai-constraints-heading">The messy reality.</h2>
+        <p>Solo project. No budget. Free-tier AI API with hard rate limits. Every design decision had a cost attached — in time, in complexity, or in scope. Here is the honest version.</p>
+
+        <div class="case-decisions" style="margin-top: var(--space-5);">
+          <article>
+            <h3>Free-tier API rate limits</h3>
+            <p>Under concurrent sessions or rapid message sending, API calls fail silently or return a 429 error. A generic error screen was the obvious solution. It was also the wrong one — a user in a vulnerable emotional state who sees a broken app does not try again. They leave.</p>
+            <p style="margin-top: var(--space-2);">Decision: after 3 consecutive failed calls, Kai shifts into a rule-based mode and sends "I'm having a slow moment — let's keep it simple." The conversation continues. No 500 error. No broken state.</p>
+          </article>
+          <article>
+            <h3>Anonymous-to-registered session merge</h3>
+            <p>Mandatory sign-in before any chat caused hesitation in all 4 hallway testers. Two asked "why do I need an account just to talk?" Making sign-in optional introduced a technical edge case: a guest user who signs up mid-conversation has their chat history orphaned under an anonymous UID.</p>
+            <p style="margin-top: var(--space-2);">Decision: Firebase's linkWithCredential() merges the anonymous session into the new authenticated account, preserving all chat documents. This is invisible in Figma. It only exists if you understand the auth model.</p>
+          </article>
+          <article>
+            <h3>Hinglish sentiment model accuracy</h3>
+            <p>There is no production-grade off-the-shelf sentiment model for Hinglish. English-trained models score "yaar bahut bura lag raha hai" as neutral because the individual English tokens carry no negative weight.</p>
+            <p style="margin-top: var(--space-2);">Decision: manually labelled 60 Hinglish phrases across three sentiment categories and built a keyword-based scoring dictionary as a v1 stopgap. It fails on sarcasm and regional slang. This limitation is documented — not hidden.</p>
+          </article>
+          <article>
+            <h3>Scope cut — weekly reflection report</h3>
+            <p>Three days before the deadline I cut the weekly reflection report entirely. The screens were finished in Figma. The backend schema required to support it — aggregating session data by week, storing keyword frequency, generating the summary — would have doubled Firestore complexity and added at least 3 days of build time.</p>
+            <p style="margin-top: var(--space-2);">Lesson: design the data model before designing the screen. For any feature that displays aggregated data, the first question is not "what should this look like?" It is "what does the database need to store, and how expensive is that query?"</p>
+          </article>
+        </div>
+
+        <div class="frame-row frame-row--two" style="margin-top: var(--space-6);" aria-label="Constraint screens">
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add kai-02.jpg">
+            <img src="../assets/images/kai-02.jpg" alt="Kai fallback state — slow moment message" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
           </figure>
-          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add kai-03.jpg">
-            <img src="../assets/images/kai-03.jpg" alt="Kai app screen showing mood reflection" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
-          </figure>
-          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add kai-04.jpg">
-            <img src="../assets/images/kai-04.jpg" alt="Kai app screen showing mood trends" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add kai-03.jpg">
+            <img src="../assets/images/kai-03.jpg" alt="Kai optional sign-in prompt at end of first session" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
           </figure>
         </div>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="kai-decisions-heading">
-        <p class="eyebrow">Design Decisions</p>
-        <h2 id="kai-decisions-heading">Small choices that make the experience feel more considered.</h2>
-        <div class="case-decisions">
-          <article>
-            <h3>English and Hinglish chat</h3>
-            <p>I included both languages so people can use the language that feels natural to them.</p>
-          </article>
-          <article>
-            <h3>Mood trends</h3>
-            <p>Sentiment scoring and mood-trend charts make mood patterns available to reflect on.</p>
-          </article>
-          <article>
-            <h3>A graceful fallback</h3>
-            <p>If the AI is unavailable, a friendly fallback keeps the experience from ending at a dead end.</p>
-          </article>
-          <article>
-            <h3>Privacy-first sign-in</h3>
-            <p>Secure sign-in and privacy-first data handling give personal wellness information careful treatment.</p>
-          </article>
+      <!-- ── Part 3: Iterations & Key Decisions ────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="kai-iterations-heading">
+        <p class="eyebrow">Part 3 · Iterations &amp; Key Decision Points</p>
+        <h2 id="kai-iterations-heading">Two layouts. One clear winner — but not for the reason I expected.</h2>
+
+        <div class="section-split" style="margin-top: var(--space-5);">
+          <div>
+            <p class="eyebrow">Option A — Full-screen chat</p>
+            <h3>WhatsApp-style single stream</h3>
+            <p>The entire screen is the chat. Mood data and analytics are accessible only through a separate tab — never visible during an active conversation. One focus. One thread.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Option B — Split-panel layout</p>
+            <h3>Chat left, mood summary right</h3>
+            <p>Chat on the left (60% width). A live mood summary panel on the right: current sentiment score, a trend sparkline, and keyword tags extracted from the conversation in real time.</p>
+          </div>
         </div>
-        <div class="frame-row frame-row--two" aria-label="Kai design decision images">
-          <figure class="frame frame--wide frame--polaroid" data-empty-label="Add kai-05.jpg">
-            <img src="../assets/images/kai-05.jpg" alt="Kai design detail illustrating English and Hinglish chat" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+
+        <div class="frame-row frame-row--two" style="margin-top: var(--space-4);" aria-label="Layout options explored">
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add kai-04.jpg">
+            <img src="../assets/images/kai-04.jpg" alt="Option A — full-screen chat layout wireframe" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
           </figure>
-          <figure class="frame frame--wide frame--polaroid" data-empty-label="Add kai-06.jpg">
-            <img src="../assets/images/kai-06.jpg" alt="Kai design detail illustrating privacy-first mood reflection" width="2100" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          <figure class="frame frame--standard frame--polaroid" data-empty-label="Add kai-05.jpg">
+            <img src="../assets/images/kai-05.jpg" alt="Option B — split-panel layout wireframe, discarded" width="1600" height="900" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+        </div>
+
+        <h3 style="margin-top: var(--space-6);">Why Option B was discarded</h3>
+        <p>I ran informal think-aloud sessions with 4 classmates using a clickable Figma prototype of both layouts. The split-panel failed for one specific reason that no amount of design theory would have predicted without testing: users felt <em>watched</em>.</p>
+        <p>Two out of four testers, unprompted, used the word "uncomfortable" when the mood panel updated in real time during a vulnerable message. One tester stopped typing mid-sentence, looked at the sentiment indicator, and said "wait, it's judging me right now?"</p>
+        <p>That is the opposite of the emotional register Kai is supposed to create. The mood panel — designed to feel empowering — felt surveillance-like in practice. The data was correct. The placement was wrong.</p>
+        <p>Decision: moved all mood analytics to a separate, intentionally accessed tab. Users choose when to look at their mood data. It is never passively surfaced during a conversation. This is the difference between designing for a feature and designing for a feeling.</p>
+
+        <div class="frame-row" style="margin-top: var(--space-5);" aria-label="Final resolved screens">
+          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add kai-06.jpg">
+            <img src="../assets/images/kai-06.jpg" alt="Final chat interface — full screen, Hinglish conversation in progress" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add kai-07.jpg">
+            <img src="../assets/images/kai-07.jpg" alt="Mood analytics tab — intentionally accessed, separate from chat" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
+          </figure>
+          <figure class="frame frame--phone frame--polaroid" data-empty-label="Add kai-08.jpg">
+            <img src="../assets/images/kai-08.jpg" alt="Optional sign-in prompt card at end of first session" width="900" height="1950" loading="lazy" onerror="this.hidden = true; this.parentElement.classList.add('frame--empty')" />
           </figure>
         </div>
       </section>
 
-      <section class="page-shell page-section case-section" aria-labelledby="kai-learning-heading">
-        <p class="eyebrow">What I Learned</p>
-        <h2 id="kai-learning-heading">An experience should feel easy and kind to use.</h2>
-        <p>Building Kai showed me that what I love most is making a product feel easy and kind to use.</p>
+      <!-- ── Part 4: Final Solution & Technical Edge ────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="kai-solution-heading">
+        <p class="eyebrow">Part 4 · Final Solution &amp; Technical Edge</p>
+        <h2 id="kai-solution-heading">What the prototype covers.</h2>
+        <p>A full-screen Hinglish-aware chat interface, a graceful AI fallback, an intentionally accessed mood analytics tab, and an optional sign-in flow — all designed with the implementation model in mind, not just the visual layer.</p>
+
+        <div class="case-decisions" style="margin-top: var(--space-5);">
+          <article>
+            <h3>The chat interface</h3>
+            <p>Full-screen, single-stream conversation. Hinglish input accepted without correction or translation. Kai's responses adapt tone based on keyword sentiment scoring — warmer and more check-in-oriented when distress keywords are detected, lighter when positive keywords dominate.</p>
+          </article>
+          <article>
+            <h3>The fallback state</h3>
+            <p>After 3 failed API calls, Kai switches to rule-based mode. The transition is disclosed in character: "I'm having a slow moment — let's keep it simple." The conversation continues with pre-written supportive responses. No error screen. No broken state.</p>
+          </article>
+          <article>
+            <h3>The mood analytics tab</h3>
+            <p>Accessed intentionally via bottom navigation. Shows a mood trend chart across recent sessions, a session history list, and the top emotional keywords from recent conversations. Never visible during an active chat.</p>
+          </article>
+          <article>
+            <h3>The optional sign-in prompt</h3>
+            <p>Appears as a card at the end of the first session. Two options: "Save my history" (leads to sign-up) and "Maybe later" (dismisses and continues as guest). No pressure, no gate. Firebase's linkWithCredential() handles the anonymous-to-registered session merge without data loss.</p>
+          </article>
+        </div>
+
+        <div style="margin-top: var(--space-6);">
+          <p class="eyebrow">The CS advantage</p>
+          <h3>Three things a non-technical designer would not have caught</h3>
+          <p>The anonymous session merge required understanding Firebase's anonymous authentication and the linkWithCredential() merge path — invisible in Figma, critical in production. The fallback trigger logic required a retry counter, a threshold check, and a state flag that switches the response handler from AI-generated to rule-based. The sentiment scoring architecture uses a local JSON keyword dictionary — zero latency, no rate limit, works offline. The trade-off (limited accuracy) is documented. The architectural choice was deliberate.</p>
+        </div>
+
+        <ul class="pill-list" aria-label="Technical stack" style="margin-top: var(--space-3);">
+          <li><span>Figma</span></li>
+          <li><span>Firebase Auth</span></li>
+          <li><span>Firestore</span></li>
+          <li><span>Chart.js</span></li>
+          <li><span>HTML/CSS/JS</span></li>
+          <li><span>Keyword sentiment dictionary</span></li>
+          <li><span>Graceful API fallback</span></li>
+        </ul>
       </section>
 
-      <!-- TODO: add what's next when the project roadmap is confirmed. -->
+      <!-- ── Part 5: Impact & Learnings ────────────────────── -->
+      <section class="page-shell page-section case-section" aria-labelledby="kai-impact-heading">
+        <p class="eyebrow">Part 5 · Impact, Hiccups &amp; Honest Learnings</p>
+        <h2 id="kai-impact-heading">Target metrics and what I would do differently.</h2>
+        <p>This project is not live. These are the metrics that would validate or invalidate the core design decisions if it were deployed.</p>
 
+        <div class="case-meta" style="margin-top: var(--space-5);">
+          <div class="case-meta__item">
+            <span class="case-meta__label">Session completion</span>
+            <span class="case-meta__value">Target &gt; 70%</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Day-7 return rate</span>
+            <span class="case-meta__value">Target &gt; 30%</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Fallback trigger rate</span>
+            <span class="case-meta__value">Target &lt; 15%</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Mood tab open rate</span>
+            <span class="case-meta__value">Target &gt; 40%</span>
+          </div>
+        </div>
+
+        <div class="case-decisions" style="margin-top: var(--space-6);">
+          <article>
+            <h3>The scope cut that taught me the most</h3>
+            <p>I designed the weekly reflection report before I designed the data model that would support it. The UI was finished. The Figma screens looked good. Then I sat down to plan the Firestore schema and realised the aggregation logic would require a Cloud Function running on a schedule, a separate collection for weekly summaries, and significantly more read/write operations than the rest of the app combined. I cut the feature 3 days before my deadline.</p>
+          </article>
+          <article>
+            <h3>The sentiment model ceiling</h3>
+            <p>The 60-phrase keyword dictionary works for the phrases I labelled. It fails on sarcasm, on regional slang outside my own vocabulary, and on sentences where the emotional weight is carried by context rather than individual words. "Haan bilkul, sab theek hai" said sarcastically scores as positive. It is not positive. I documented this as a known v1 limitation rather than pretending it does not exist.</p>
+          </article>
+          <article>
+            <h3>The split-panel assumption</h3>
+            <p>I assumed real-time mood visibility would feel empowering. It felt like surveillance. This was the most important thing hallway testing taught me: the gap between what a feature is designed to do and what it actually makes a user feel can only be found by watching a real person use it. No amount of design rationale closes that gap.</p>
+          </article>
+          <article>
+            <h3>What I would do differently</h3>
+            <p>Start with a content audit of what data I can actually collect before designing any data-visualisation feature. Define the data model before designing the screen. Test the feeling, not just the flow — usability testing catches broken flows, but only emotional observation catches broken feelings.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── Next case study ────────────────────────────────── -->
       <nav class="page-shell page-section" aria-label="Other case studies">
         <a class="btn btn--secondary" href="quiz-buddy.html">Next case study: Quiz Buddy</a>
       </nav>
+
     </main>
 
     <footer class="site-footer">
